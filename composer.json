@@ -1,0 +1,27 @@
+{
+    "name": "franko4don/cloudflare",
+    "description": "A simple library for consuming cloudflare Apis",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "franko4don",
+            "email": "franko4don@yahoo.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Frank\\Cloudflare\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Frank\\Cloudflare\\CloudflareServiceProvider"
+            ]
+        }
+    }
+}

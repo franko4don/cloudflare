@@ -11,9 +11,13 @@ You can add this library as a local, per-project dependency to your project usin
 ## Usage
 
 `.env`
+
 CLOUDFLARE_API_KEY='your cloudflare key'
+
 CLOUDFLARE_EMAIL='your cloudflare email'
 
 `routes`
+
 {{url}}/cloudflare/zones
+
 {{url}}/cloudflare/user/account

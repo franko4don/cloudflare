@@ -15,10 +15,10 @@ class SuperController extends Controller
 
     public function __construct(){
         $this->headers = [
-            'X-Auth-Key' => Config::get('key'),
-            'X-Auth-Email' => Config::get('email')
+            'X-Auth-Key' => Config::get('cloudflare.key'),
+            'X-Auth-Email' => Config::get('cloudflare.email')
         ];
-        $this->api_url = Config::get('url');
+        $this->api_url = Config::get('cloudflare.url');
     }
 
 
@@ -80,7 +80,7 @@ class SuperController extends Controller
         $per_page = isset($request->per_page) 
                     && is_numeric($request->per_page)
                     ? "?per_page=$request->per_page" 
-                    : "?per_page=".Config::get('per_page');
+                    : "?per_page=".Config::get('cloudflare.per_page');
         return $per_page;
     }
 

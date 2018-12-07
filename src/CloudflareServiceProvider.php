@@ -17,7 +17,7 @@ class CloudflareServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/routes/web.php');
         $this->loadViewsFrom(__DIR__.'/views', 'cloudflare');;
         $this->publishes([
-            __DIR__.'config/cloudflare.php' => config_path('cloudflare.php'),
+            __DIR__.'/../config/cloudflare.php' => config_path('cloudflare.php'),
         ]);
     }
 
@@ -29,7 +29,7 @@ class CloudflareServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/cloudflare.php', 'cloudflare'
+            __DIR__.'/../config/cloudflare.php', 'cloudflare'
         );
     }
 }
